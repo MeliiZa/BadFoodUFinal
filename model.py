@@ -22,10 +22,10 @@ class User(db.Model):
                         autoincrement=True,
                         primary_key=True)
 
-    name = db.Column(db.String(64), nullable=True)
-    lastname = db.Column(db.String(64), nullable=True)
-    email = db.Column(db.String(64), nullable=True)
-    password = db.Column(db.String(16), nullable=True)
+    name = db.Column(db.String(64), nullable=False)
+    lastname = db.Column(db.String(64), nullable=False)
+    email = db.Column(db.String(64), nullable=False)
+    password = db.Column(db.String(16), nullable=False)
 
     def __repr__(self):
         """Provide helpful representation when printed."""
@@ -38,13 +38,15 @@ class User(db.Model):
 class Restaurant(db.Model):
     """Rating of a movie by a user."""
 
-    __tablename__ = "restaurants"
+    __tablename__ = "restaurant"
 
     restaurant_id = db.Column(db.Integer,
                           autoincrement=True,
                           primary_key=True)
     restaurant_name = db.Column(db.String(2000))
     location= db.Column(db.String(4000))
+    latitude = db.Column(db.Integer(1000))
+    longitud = db.Column(db.Integer(1000))
     
 
     def __repr__(self):
@@ -60,6 +62,7 @@ class Incident(db.Model):
 
     __tablename__ = "incident"
 
+    incident_id= db.Column(db.integer,autoincrement=True, primary_key=True,)
     upset_stomach = db.Column(db.Boolean, nullable= False)
     stomach_cramp = db.Column(db.Boolean, nullable= False)
     nausea = db.Column(db.Boolean, nullable= False)
