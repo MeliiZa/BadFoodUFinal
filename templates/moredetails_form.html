@@ -1,0 +1,351 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Tell us where were your last 3 meals</h1>
+
+<form action="/moredetails" method="POST">
+
+
+  <div>
+    <label>
+      First restaurant
+      <select>
+      <option value="">--Please choose an option--</option>
+      <option value="Tacorea">Tacorea</option> 
+      <option value="DelaRosa">DeLaRosa</option> 
+      <option value="Hogwash">Hogwash</option> 
+      <option value="Kin Khao">Kin Khao</option> 
+      <option value="Hops & Homin">Hops & Homin</option> 
+      <option value="The View Lounge">The View Lounge</option>
+      <option value="Fifth Arrow">Fifth Arrow</option>
+      <option value="Urban Tavern">Urban Tavern</option>
+      <option value="Hopwater Distribution">Hopwater Distribution</option>
+      <option value="ONE65 Bistro & Grill">ONE65 Bistro & Grill</option>
+      <option value="Amami">Amami</option>
+      <option value="Tropisueno">Tropisueno</option>
+      <option value="O' by Claude Le Tohic">O' by Claude Le Tohic</option>
+      <option value="Bartlett Hall">Bartlett Hall</option>
+      <option value="Akiko's Restaurant">Akiko's Restaurant</option>
+      <option value="Farallon">Farallon</option>
+      <option value="Super Duper Burgers">Super Duper Burgers</option>
+      <option value="Mikkeller Bar">Mikkeller Bar</option>
+      <option value="Burma Club">Burma Club</option>
+      <option value="E&O Kitchen and Bar">E&O Kitchen and Bar</option>
+      <option value="Hakkasan">Hakkasan</option>
+      <option value="La Marsa">La Marsa</option>
+      <option value="The Rotunda">he Rotunda</option>
+      <option value="Sushi Nagai">Sushi Nagai</option>
+      <option value="Liholiho Yacht Club">Liholiho Yacht Club</option>
+      <option value="Bota Tapas & Paella Bar">Bota Tapas & Paella Bar</option>
+      <option value="Bouche">Bouche</option>
+      <option value="Ippudo San Francisco">Ippudo San Francisco</option>
+      <option value="M.Y. China">M.Y. China</option>
+      <option value="Matador">Matador</option>
+      <option value="Waystone">Waystone</option>
+      <option value="Last Drop Tavern">Last Drop Tavern</option>
+      <option value="Rooster & Rice">Rooster & Rice</option>
+      <option value="Honey Honey Cafe and Crepery">Honey Honey Cafe and Crepery</option>
+      <option value="Oren's Hummus">Oren's Hummus</option>
+      <option value="Little Sheep Mongolian Hot Pot">Little Sheep Mongolian Hot Pot</option>
+      <option value="The Cavalier">The Cavalier</option>
+      <option value="The Bird">The Bird</option>
+      <option value="Colibri Mexican Bistro">Colibri Mexican Bistro</option>
+      <option value="PianoFight">PianoFight</option>
+      <option value="The Keystone">The Keystone</option>
+      <option value="Ayala Restaurant">Ayala Restaurant</option>
+      <option value="54 Mint - Ristorante Italiano">54 Mint - Ristorante Italiano</option>
+      <option value="Johnny Foley's">Johnny Foley's</option>
+      <option value="Braised + Bread">Braised + Bread</option>
+      <option value="Mensho Tokyo">Mensho Tokyo</option>
+      <option value="Bluestem Brasserie">Bluestem Brasserie</option>
+      <option value="Tselogs">Tselogs</option>
+      <option value="Little Delhi">Little Delhi</option>
+      <option value="King Of Thai Noodle House">King Of Thai Noodle House</option>
+      <option value="Taqueria Castillo Mason">Taqueria Castillo Mason</option>
+      <option value="Del Popolo">Del Popolo</option>
+      <option value="Box Kitchen">Box Kitchen</option>
+      <option value="Cocobang">Cocobang</option>
+      <option value="Rambler">Rambler</option>
+      <option value="Bazille">Bazille</option>
+      <option value="Lao Table">ao Table</option>
+      <option value="Bar 587">Bar 587</option>
+      <option value="Tratto">Tratto</option>
+      <option value="Amber India">Amber India</option>
+      <option value="Beanstalk Cafe">Beanstalk Cafe</option>
+      <option value="Barnzu">Barnzu</option>
+      <option value="Biscuits & Blues">Biscuits & Blues</option>
+      <option value="Hashiri">Hashiri</option>
+      <option value="The Halal Guys - San Francisco">The Halal Guys - San Francisco</option>
+      <option value="Marlowe">Marlowe</option>
+      <option value="Kusina Ni Tess">Kusina Ni Tess</option>
+      <option value="Katana-Ya">Katana-Ya</option>
+      <option value="Sutter St. Cafe">Sutter St. Cafe</option>
+      <option value="Aquitaine">Aquitaine</option>
+      <option value="SF Chickenbox">SF Chickenbox</option>
+      <option value="The Pawn Shop">The Pawn Shop</option>
+      <option value="Ryoko's">Ryoko's</option>
+      <option value="Food Emporium">Food Emporium</option>
+      <option value="707 Sutter">707 Sutter</option>
+      <option value="Sanraku">Sanraku</option>
+      <option value="The Douglas Room">The Douglas Room</option>
+      <option value="Kusina Ni Tess">Kusina Ni Tess</option>
+      <option value="Farm : Table">Farm : Table</option>
+      <option value="RM 212">RM 212</option>
+      <option value="Sutter St. Cafe">Sutter St. Cafe</option>
+      <option value="Barcha">Barcha</option>
+      <option value="Samovar Tea - Yerba Buena Gardens">Samovar Tea - Yerba Buena Gardens</option>
+      <option value="Super Duper Burgers">Super Duper Burgers</option>
+      <option value="Dirty Habit">Dirty Habit</option>
+      <option value="Biscuits & Blues">Biscuits & Blues</option>
+      <option value="Tap415">Tap415</option>
+      <option value="Lapisara Eatery">Lapisara Eatery</option>
+      <option value="Popsons">Popsons</option>
+      <option value="Montesacro Pinseria SF">Montesacro Pinseria SF</option>
+      <option value="Buckhorn Grill - San Francisco">Buckhorn Grill - San Francisco</option>
+      <option value="Hashiri">Hashiri</option>
+      <option value="The Cheesecake Factory">The Cheesecake Factory</option>
+      <option value="White Horse Tavern & Restaurant">White Horse Tavern & Restaurant</option>
+      <option value="Working Girls' Cafe">Working Girls' Cafe</option>
+      <option value="Burger Bar">Burger Bar</option>
+      <option value="Zero Zero">Zero Zero</option>
+      <option value="Pinecrest Diner">Pinecrest Diner</option>
+      <option value="SF Chickenbox">SF Chickenbox</option>
+      <option value="Gibson">Gibson</option>
+
+      </select>
+      <input type="date" />
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Second restaurant
+      <select>
+      <option value="">--Please choose an option--</option>  
+      <option value="Tacorea">Tacorea</option> 
+      <option value="DelaRosa">DeLaRosa</option> 
+      <option value="Hogwash">Hogwash</option> 
+      <option value="Kin Khao">Kin Khao</option> 
+      <option value="Hops & Homin">Hops & Homin</option> 
+      <option value="The View Lounge">The View Lounge</option>
+      <option value="Fifth Arrow">Fifth Arrow</option>
+      <option value="Urban Tavern">Urban Tavern</option>
+      <option value="Hopwater Distribution">Hopwater Distribution</option>
+      <option value="ONE65 Bistro & Grill">ONE65 Bistro & Grill</option>
+      <option value="Amami">Amami</option>
+      <option value="Tropisueno">Tropisueno</option>
+      <option value="O' by Claude Le Tohic">O' by Claude Le Tohic</option>
+      <option value="Bartlett Hall">Bartlett Hall</option>
+      <option value="Akiko's Restaurant">Akiko's Restaurant</option>
+      <option value="Farallon">Farallon</option>
+      <option value="Super Duper Burgers">Super Duper Burgers</option>
+      <option value="Mikkeller Bar">Mikkeller Bar</option>
+      <option value="Burma Club">Burma Club</option>
+      <option value="E&O Kitchen and Bar">E&O Kitchen and Bar</option>
+      <option value="Hakkasan">Hakkasan</option>
+      <option value="La Marsa">La Marsa</option>
+      <option value="The Rotunda">he Rotunda</option>
+      <option value="Sushi Nagai">Sushi Nagai</option>
+      <option value="Liholiho Yacht Club">Liholiho Yacht Club</option>
+      <option value="Bota Tapas & Paella Bar">Bota Tapas & Paella Bar</option>
+      <option value="Bouche">Bouche</option>
+      <option value="Ippudo San Francisco">Ippudo San Francisco</option>
+      <option value="M.Y. China">M.Y. China</option>
+      <option value="Matador">Matador</option>
+      <option value="Waystone">Waystone</option>
+      <option value="Last Drop Tavern">Last Drop Tavern</option>
+      <option value="Rooster & Rice">Rooster & Rice</option>
+      <option value="Honey Honey Cafe and Crepery">Honey Honey Cafe and Crepery</option>
+      <option value="Oren's Hummus">Oren's Hummus</option>
+      <option value="Little Sheep Mongolian Hot Pot">Little Sheep Mongolian Hot Pot</option>
+      <option value="The Cavalier">The Cavalier</option>
+      <option value="The Bird">The Bird</option>
+      <option value="Colibri Mexican Bistro">Colibri Mexican Bistro</option>
+      <option value="PianoFight">PianoFight</option>
+      <option value="The Keystone">The Keystone</option>
+      <option value="Ayala Restaurant">Ayala Restaurant</option>
+      <option value="54 Mint - Ristorante Italiano">54 Mint - Ristorante Italiano</option>
+      <option value="Johnny Foley's">Johnny Foley's</option>
+      <option value="Braised + Bread">Braised + Bread</option>
+      <option value="Mensho Tokyo">Mensho Tokyo</option>
+      <option value="Bluestem Brasserie">Bluestem Brasserie</option>
+      <option value="Tselogs">Tselogs</option>
+      <option value="Little Delhi">Little Delhi</option>
+      <option value="King Of Thai Noodle House">King Of Thai Noodle House</option>
+      <option value="Taqueria Castillo Mason">Taqueria Castillo Mason</option>
+      <option value="Del Popolo">Del Popolo</option>
+      <option value="Box Kitchen">Box Kitchen</option>
+      <option value="Cocobang">Cocobang</option>
+      <option value="Rambler">Rambler</option>
+      <option value="Bazille">Bazille</option>
+      <option value="Lao Table">ao Table</option>
+      <option value="Bar 587">Bar 587</option>
+      <option value="Tratto">Tratto</option>
+      <option value="Amber India">Amber India</option>
+      <option value="Beanstalk Cafe">Beanstalk Cafe</option>
+      <option value="Barnzu">Barnzu</option>
+      <option value="Biscuits & Blues">Biscuits & Blues</option>
+      <option value="Hashiri">Hashiri</option>
+      <option value="The Halal Guys - San Francisco">The Halal Guys - San Francisco</option>
+      <option value="Marlowe">Marlowe</option>
+      <option value="Kusina Ni Tess">Kusina Ni Tess</option>
+      <option value="Katana-Ya">Katana-Ya</option>
+      <option value="Sutter St. Cafe">Sutter St. Cafe</option>
+      <option value="Aquitaine">Aquitaine</option>
+      <option value="SF Chickenbox">SF Chickenbox</option>
+      <option value="The Pawn Shop">The Pawn Shop</option>
+      <option value="Ryoko's">Ryoko's</option>
+      <option value="Food Emporium">Food Emporium</option>
+      <option value="707 Sutter">707 Sutter</option>
+      <option value="Sanraku">Sanraku</option>
+      <option value="The Douglas Room">The Douglas Room</option>
+      <option value="Kusina Ni Tess">Kusina Ni Tess</option>
+      <option value="Farm : Table">Farm : Table</option>
+      <option value="RM 212">RM 212</option>
+      <option value="Sutter St. Cafe">Sutter St. Cafe</option>
+      <option value="Barcha">Barcha</option>
+      <option value="Samovar Tea - Yerba Buena Gardens">Samovar Tea - Yerba Buena Gardens</option>
+      <option value="Super Duper Burgers">Super Duper Burgers</option>
+      <option value="Dirty Habit">Dirty Habit</option>
+      <option value="Biscuits & Blues">Biscuits & Blues</option>
+      <option value="Tap415">Tap415</option>
+      <option value="Lapisara Eatery">Lapisara Eatery</option>
+      <option value="Popsons">Popsons</option>
+      <option value="Montesacro Pinseria SF">Montesacro Pinseria SF</option>
+      <option value="Buckhorn Grill - San Francisco">Buckhorn Grill - San Francisco</option>
+      <option value="Hashiri">Hashiri</option>
+      <option value="The Cheesecake Factory">The Cheesecake Factory</option>
+      <option value="White Horse Tavern & Restaurant">White Horse Tavern & Restaurant</option>
+      <option value="Working Girls' Cafe">Working Girls' Cafe</option>
+      <option value="Burger Bar">Burger Bar</option>
+      <option value="Zero Zero">Zero Zero</option>
+      <option value="Pinecrest Diner">Pinecrest Diner</option>
+      <option value="SF Chickenbox">SF Chickenbox</option>
+      <option value="Gibson">Gibson</option>
+
+      </select>
+ 
+      <input type="date" />
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Third restaurant
+      <select>
+      <option value="">--Please choose an option--</option>
+      <option value="Tacorea">Tacorea</option> 
+      <option value="DelaRosa">DeLaRosa</option> 
+      <option value="Hogwash">Hogwash</option> 
+      <option value="Kin Khao">Kin Khao</option> 
+      <option value="Hops & Homin">Hops & Homin</option> 
+      <option value="The View Lounge">The View Lounge</option>
+      <option value="Fifth Arrow">Fifth Arrow</option>
+      <option value="Urban Tavern">Urban Tavern</option>
+      <option value="Hopwater Distribution">Hopwater Distribution</option>
+      <option value="ONE65 Bistro & Grill">ONE65 Bistro & Grill</option>
+      <option value="Amami">Amami</option>
+      <option value="Tropisueno">Tropisueno</option>
+      <option value="O' by Claude Le Tohic">O' by Claude Le Tohic</option>
+      <option value="Bartlett Hall">Bartlett Hall</option>
+      <option value="Akiko's Restaurant">Akiko's Restaurant</option>
+      <option value="Farallon">Farallon</option>
+      <option value="Super Duper Burgers">Super Duper Burgers</option>
+      <option value="Mikkeller Bar">Mikkeller Bar</option>
+      <option value="Burma Club">Burma Club</option>
+      <option value="E&O Kitchen and Bar">E&O Kitchen and Bar</option>
+      <option value="Hakkasan">Hakkasan</option>
+      <option value="La Marsa">La Marsa</option>
+      <option value="The Rotunda">he Rotunda</option>
+      <option value="Sushi Nagai">Sushi Nagai</option>
+      <option value="Liholiho Yacht Club">Liholiho Yacht Club</option>
+      <option value="Bota Tapas & Paella Bar">Bota Tapas & Paella Bar</option>
+      <option value="Bouche">Bouche</option>
+      <option value="Ippudo San Francisco">Ippudo San Francisco</option>
+      <option value="M.Y. China">M.Y. China</option>
+      <option value="Matador">Matador</option>
+      <option value="Waystone">Waystone</option>
+      <option value="Last Drop Tavern">Last Drop Tavern</option>
+      <option value="Rooster & Rice">Rooster & Rice</option>
+      <option value="Honey Honey Cafe and Crepery">Honey Honey Cafe and Crepery</option>
+      <option value="Oren's Hummus">Oren's Hummus</option>
+      <option value="Little Sheep Mongolian Hot Pot">Little Sheep Mongolian Hot Pot</option>
+      <option value="The Cavalier">The Cavalier</option>
+      <option value="The Bird">The Bird</option>
+      <option value="Colibri Mexican Bistro">Colibri Mexican Bistro</option>
+      <option value="PianoFight">PianoFight</option>
+      <option value="The Keystone">The Keystone</option>
+      <option value="Ayala Restaurant">Ayala Restaurant</option>
+      <option value="54 Mint - Ristorante Italiano">54 Mint - Ristorante Italiano</option>
+      <option value="Johnny Foley's">Johnny Foley's</option>
+      <option value="Braised + Bread">Braised + Bread</option>
+      <option value="Mensho Tokyo">Mensho Tokyo</option>
+      <option value="Bluestem Brasserie">Bluestem Brasserie</option>
+      <option value="Tselogs">Tselogs</option>
+      <option value="Little Delhi">Little Delhi</option>
+      <option value="King Of Thai Noodle House">King Of Thai Noodle House</option>
+      <option value="Taqueria Castillo Mason">Taqueria Castillo Mason</option>
+      <option value="Del Popolo">Del Popolo</option>
+      <option value="Box Kitchen">Box Kitchen</option>
+      <option value="Cocobang">Cocobang</option>
+      <option value="Rambler">Rambler</option>
+      <option value="Bazille">Bazille</option>
+      <option value="Lao Table">ao Table</option>
+      <option value="Bar 587">Bar 587</option>
+      <option value="Tratto">Tratto</option>
+      <option value="Amber India">Amber India</option>
+      <option value="Beanstalk Cafe">Beanstalk Cafe</option>
+      <option value="Barnzu">Barnzu</option>
+      <option value="Biscuits & Blues">Biscuits & Blues</option>
+      <option value="Hashiri">Hashiri</option>
+      <option value="The Halal Guys - San Francisco">The Halal Guys - San Francisco</option>
+      <option value="Marlowe">Marlowe</option>
+      <option value="Kusina Ni Tess">Kusina Ni Tess</option>
+      <option value="Katana-Ya">Katana-Ya</option>
+      <option value="Sutter St. Cafe">Sutter St. Cafe</option>
+      <option value="Aquitaine">Aquitaine</option>
+      <option value="SF Chickenbox">SF Chickenbox</option>
+      <option value="The Pawn Shop">The Pawn Shop</option>
+      <option value="Ryoko's">Ryoko's</option>
+      <option value="Food Emporium">Food Emporium</option>
+      <option value="707 Sutter">707 Sutter</option>
+      <option value="Sanraku">Sanraku</option>
+      <option value="The Douglas Room">The Douglas Room</option>
+      <option value="Kusina Ni Tess">Kusina Ni Tess</option>
+      <option value="Farm : Table">Farm : Table</option>
+      <option value="RM 212">RM 212</option>
+      <option value="Sutter St. Cafe">Sutter St. Cafe</option>
+      <option value="Barcha">Barcha</option>
+      <option value="Samovar Tea - Yerba Buena Gardens">Samovar Tea - Yerba Buena Gardens</option>
+      <option value="Super Duper Burgers">Super Duper Burgers</option>
+      <option value="Dirty Habit">Dirty Habit</option>
+      <option value="Biscuits & Blues">Biscuits & Blues</option>
+      <option value="Tap415">Tap415</option>
+      <option value="Lapisara Eatery">Lapisara Eatery</option>
+      <option value="Popsons">Popsons</option>
+      <option value="Montesacro Pinseria SF">Montesacro Pinseria SF</option>
+      <option value="Buckhorn Grill - San Francisco">Buckhorn Grill - San Francisco</option>
+      <option value="Hashiri">Hashiri</option>
+      <option value="The Cheesecake Factory">The Cheesecake Factory</option>
+      <option value="White Horse Tavern & Restaurant">White Horse Tavern & Restaurant</option>
+      <option value="Working Girls' Cafe">Working Girls' Cafe</option>
+      <option value="Burger Bar">Burger Bar</option>
+      <option value="Zero Zero">Zero Zero</option>
+      <option value="Pinecrest Diner">Pinecrest Diner</option>
+      <option value="SF Chickenbox">SF Chickenbox</option>
+      <option value="Gibson">Gibson</option>
+
+      </select>
+      
+      <input type="date" />
+    </label>
+  </div>
+
+    <div>
+      <input type="submit" value="Log In">
+    </div>
+
+
+</form>
+
+{% endblock %}
