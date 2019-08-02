@@ -45,8 +45,8 @@ class Restaurant(db.Model):
                           primary_key=True)
     restaurant_name = db.Column(db.String(2000))
     location= db.Column(db.String(4000))
-    latitude = db.Column(db.Integer(1000))
-    longitud = db.Column(db.Integer(1000))
+    latitude = db.Column(db.Integer)
+    longitud = db.Column(db.Integer)
     
 
     def __repr__(self):
@@ -62,13 +62,13 @@ class Incident(db.Model):
 
     __tablename__ = "incident"
 
-    incident_id= db.Column(db.integer,autoincrement=True, primary_key=True,)
-    upset_stomach = db.Column(db.Boolean, nullable= False)
-    stomach_cramp = db.Column(db.Boolean, nullable= False)
-    nausea = db.Column(db.Boolean, nullable= False)
-    vomiting = db.Column(db.Boolean, nullable= False)
-    diarrhea = db.Column(db.Boolean, nullable= False)
-    fever = db.Column(db.Boolean, nullable= False)
+    incident_id= db.Column(db.Integer,autoincrement=True, primary_key=True,)
+    upset_stomach = db.Column(db.String(30))
+    stomach_cramp = db.Column(db.String(30))
+    nausea = db.Column(db.String(30))
+    vomiting = db.Column(db.String(30))
+    diarrhea = db.Column(db.String(30))
+    fever = db.Column(db.String(30))
     restaurant_id = db.Column(db.Integer, nullable= False)
     user_id = db.Column(db.Integer, nullable= False)
     date = db.Column(db.DateTime)
