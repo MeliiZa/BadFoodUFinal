@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block title %} BadFoodU {% endblock %}
+
+{% block content %}
+<hmtl>
+<style>
+    html,body {
+        height: 80%;
+        margin: 70;
+        padding: 70;
+      }
+    </style>
+
+<h1>Welcome, {{ user.name }} {{ user.lastname }} !</h1>
+
+
+<a href="/incident">Input your symptoms</a>
+
+
+</hmtl>
+
+
+    {% endblock %}

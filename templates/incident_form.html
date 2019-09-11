@@ -1,30 +1,466 @@
-<HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-<h1>We are sorry you dont feel well, please share your sympthoms with us!</h1>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+   <title>{% block title %}{% endblock %}</title>
+
+  
+
+
+    <!-- Main Navigation -->
+    <header>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+         <a class="navbar-brand" href="#">BadFoodU </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+         </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/homepage">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/incident">Your Symptoms</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/map">View Map</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="/aboutus">About Us</a>
+      </li>
+    </ul>
+  </div>
+        </nav>
+
+
+
+<style>
+ h1{
+      margin:120px;
+      padding:10px;
+
+ }
+</style>
+
+<h1>
+We are sorry you don't feel well, 
+
+please share your symptoms with us!</h1>
+</div>
 
 <form action="/incident" method="POST">
 
+
+<div class= "container">
+      <div class ="row">
+            <div class ="col-sm-4 col-md-4">
+                  <label class= "image-checkbox">
+                        <img class="img-responsive" src="static/images/BadFoodUIcons/UpsetStomach.png" />  
+                        <input type="checkbox" id="upset_stomach"name="upset_stomach" value="upset Stomach">
+                        <label for="upset_stomach">Upset Stomach</label>
+                        <i class="glyphicon glyphicon-ok hidden"></i>
+                  </label>
+            </div>
+            <div class ="col-sm-4 col-md-4">
+                  <label class= "image-checkbox">
+                        <img class="img-responsive" src="static/images/BadFoodUIcons/StomachCramps.png" /> 
+                        <input type="checkbox" name="stomach_cramp" id="stomach_cramp" value="stomach_cramp">
+                        <label for="stomach_cramp">Stomach Cramps</label>
+                        <i class="glyphicon glyphicon-ok hidden"></i>
+                  </label>
+            </div>
+            <div class ="col-sm-4 col-md-4">
+                  <label class= "image-checkbox">
+                        <img class="img-responsive" src="static/images/BadFoodUIcons/Nausea.png" /> 
+                        <input type="checkbox" name="nausea" id="nausea" value="nausea">
+                        <label for="nausea">Nausea</label>
+                        <i class="glyphicon glyphicon-ok hidden"></i>
+                  </label>
+            </div>
+      </div>
+      <div class ="row">
+            <div class ="col-sm-4 col-md-4">
+                  <label class= "image-checkbox">
+                        <img class="img-responsive" src="static/images/BadFoodUIcons/Vomiting.png" />  
+                        <input type="checkbox" id="vomiting" name="vomiting" value="Vomiting">
+                        <label for="Vomiting">Vomiting</label>
+                        <i class="glyphicon glyphicon-ok hidden"></i>
+                  </label>
+            </div>
+            <div class ="col-sm-4 col-md-4">
+                  <label class= "image-checkbox">
+                        <img class="img-responsive" src="static/images/BadFoodUIcons/Diarrhea.png" /> 
+                        <input type="checkbox" name="Diarrhea" id="diarrhea" value="diarrhea">
+                        <label for="diarrhea">Diarrhea</label>
+                        <i class="glyphicon glyphicon-ok hidden"></i>
+                  </label>
+            </div>
+            <div class ="col-sm-4 col-md-4">
+                  <label class= "image-checkbox">
+                        <img class="img-responsive" src="static/images/BadFoodUIcons/Fever.png" /> 
+                        <input type="checkbox" name="fever" id="fever" value="fever">
+                        <label for="fever">Nausea</label>
+                        <i class="glyphicon glyphicon-ok hidden"></i>
+                  </label>
+            </div>
+      </div>
+</div>
+
+<h2>Tell us where were your last 3 meals</h2>
+
+<style>
+      h5{
+            margin-bottom: 50px
+      }
+</style>
+<h5>
   <div>
+    <label>
+      First restaurant
+      <select name=restaurant1id>
+      <option value="">--Please choose an option--</option>
+      <option value="1">Tacorea</option> 
+      <option value="2">DeLaRosa</option> 
+      <option value="3">Hogwash</option> 
+      <option value="4">Kin Khao</option> 
+      <option value="5">Hops & Hominy</option> 
+      <option value="6">The View Lounge</option>
+      <option value="7">Fifth Arrow</option>
+      <option value="8">Urban Tavern</option>
+      <option value="9">Hopwater Distribution</option>
+      <option value="10">ONE65 Bistro & Grill</option>
+      <option value="11">Amami</option>
+      <option value="12">Tropisueno</option>
+      <option value="13">O' by Claude Le Tohic</option>
+      <option value="14">Bartlett Hall</option>
+      <option value="15">Akiko's Restaurant</option>
+      <option value="16">Farallon</option>
+      <option value="17">Super Duper Burgers</option>
+      <option value="18">Mikkeller Bar</option>
+      <option value="19">Burma Club</option>
+      <option value="20">E&O Kitchen and Bar</option>
+      <option value="21">Hakkasan</option>
+      <option value="22">La Marsa</option>
+      <option value="23">he Rotunda</option>
+      <option value="24">Sushi Nagai</option>
+      <option value="25">Liholiho Yacht Club</option>
+      <option value="26">Bota Tapas & Paella Bar</option>
+      <option value="27">Bouche</option>
+      <option value="28">Ippudo San Francisco</option>
+      <option value="29">M.Y. China</option>
+      <option value="30">Matador</option>
+      <option value="31">Waystone</option>
+      <option value="32">Last Drop Tavern</option>
+      <option value="33">Rooster & Rice</option>
+      <option value="34">Honey Honey Cafe and Crepery</option>
+      <option value="35">Oren's Hummus</option>
+      <option value="36">Little Sheep Mongolian Hot Pot</option>
+      <option value="37">The Cavalier</option>
+      <option value="38">The Bird</option>
+      <option value="39">Colibri Mexican Bistro</option>
+      <option value="40">PianoFight</option>
+      <option value="41">The Keystone</option>
+      <option value="42">Ayala Restaurant</option>
+      <option value="43">54 Mint - Ristorante Italiano</option>
+      <option value="44">Johnny Foley's</option>
+      <option value="45">Braised + Bread</option>
+      <option value="46">Mensho Tokyo</option>
+      <option value="47">Bluestem Brasserie</option>
+      <option value="48">Tselogs</option>
+      <option value="49">Little Delhi</option>
+      <option value="50">King Of Thai Noodle House</option>
+      <option value="51">Taqueria Castillo Mason</option>
+      <option value="52">Del Popolo</option>
+      <option value="53">Box Kitchen</option>
+      <option value="54">Cocobang</option>
+      <option value="55">Rambler</option>
+      <option value="56">Bazille</option>
+      <option value="57">Lao Table</option>
+      <option value="58">Bar 587</option>
+      <option value="59">Tratto</option>
+      <option value="60">Amber India</option>
+      <option value="61">Beanstalk Cafe</option>
+      <option value="62">Barnzu</option>
+      <option value="63">Biscuits & Blues</option>
+      <option value="64">Hashiri</option>
+      <option value="65">The Halal Guys - San Francisco</option>
+      <option value="66">Marlowe</option>
+      <option value="67">Kusina Ni Tess</option>
+      <option value="68">Katana-Ya</option>
+      <option value="69">Sutter St. Cafe</option>
+      <option value="70">Aquitaine</option>
+      <option value="71">SF Chickenbox</option>
+      <option value="72">The Pawn Shop</option>
+      <option value="73">Ryoko's</option>
+      <option value="74">Food Emporium</option>
+      <option value="75">707 Sutter</option>
+      <option value="76">Sanraku</option>
+      <option value="77">The Douglas Room</option>
+      <option value="78">Kusina Ni Tess</option>
+      <option value="79">Farm : Table</option>
+      <option value="80">RM 212</option>
+      <option value="81">Sutter St. Cafe</option>
+      <option value="82">Barcha</option>
+      <option value="83">Samovar Tea - Yerba Buena Gardens</option>
+      <option value="84">Super Duper Burgers</option>
+      <option value="85">Dirty Habit</option>
+      <option value="86">Biscuits & Blues</option>
+      <option value="87">Tap415</option>
+      <option value="88">Lapisara Eatery</option>
+      <option value="89">Popsons</option>
+      <option value="90">Montesacro Pinseria SF</option>
+      <option value="91">Buckhorn Grill - San Francisco</option>
+      <option value="92">Hashiri</option>
+      <option value="93">The Cheesecake Factory</option>
+      <option value="94">White Horse Tavern & Restaurant</option>
+      <option value="95">Working Girls' Cafe</option>
+      <option value="96">Burger Bar</option>
+      <option value="97">Zero Zero</option>
+      <option value="98">Pinecrest Diner</option>
+      <option value="99">SF Chickenbox</option>
+      <option value="100">Gibson</option>
+
+      </select>
+      <input type="date" name= "date1"/>
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Second restaurant
+      <select name=restaurant2id>
+      <option value="">--Please choose an option--</option>
+      <option value="1">Tacorea</option> 
+      <option value="2">DeLaRosa</option> 
+      <option value="3">Hogwash</option> 
+      <option value="4">Kin Khao</option> 
+      <option value="5">Hops & Hominy</option> 
+      <option value="6">The View Lounge</option>
+      <option value="7">Fifth Arrow</option>
+      <option value="8">Urban Tavern</option>
+      <option value="9">Hopwater Distribution</option>
+      <option value="10">ONE65 Bistro & Grill</option>
+      <option value="11">Amami</option>
+      <option value="12">Tropisueno</option>
+      <option value="13">O' by Claude Le Tohic</option>
+      <option value="14">Bartlett Hall</option>
+      <option value="15">Akiko's Restaurant</option>
+      <option value="16">Farallon</option>
+      <option value="17">Super Duper Burgers</option>
+      <option value="18">Mikkeller Bar</option>
+      <option value="19">Burma Club</option>
+      <option value="20">E&O Kitchen and Bar</option>
+      <option value="21">Hakkasan</option>
+      <option value="22">La Marsa</option>
+      <option value="23">he Rotunda</option>
+      <option value="24">Sushi Nagai</option>
+      <option value="25">Liholiho Yacht Club</option>
+      <option value="26">Bota Tapas & Paella Bar</option>
+      <option value="27">Bouche</option>
+      <option value="28">Ippudo San Francisco</option>
+      <option value="29">M.Y. China</option>
+      <option value="30">Matador</option>
+      <option value="31">Waystone</option>
+      <option value="32">Last Drop Tavern</option>
+      <option value="33">Rooster & Rice</option>
+      <option value="34">Honey Honey Cafe and Crepery</option>
+      <option value="35">Oren's Hummus</option>
+      <option value="36">Little Sheep Mongolian Hot Pot</option>
+      <option value="37">The Cavalier</option>
+      <option value="38">The Bird</option>
+      <option value="39">Colibri Mexican Bistro</option>
+      <option value="40">PianoFight</option>
+      <option value="41">The Keystone</option>
+      <option value="42">Ayala Restaurant</option>
+      <option value="43">54 Mint - Ristorante Italiano</option>
+      <option value="44">Johnny Foley's</option>
+      <option value="45">Braised + Bread</option>
+      <option value="46">Mensho Tokyo</option>
+      <option value="47">Bluestem Brasserie</option>
+      <option value="48">Tselogs</option>
+      <option value="49">Little Delhi</option>
+      <option value="50">King Of Thai Noodle House</option>
+      <option value="51">Taqueria Castillo Mason</option>
+      <option value="52">Del Popolo</option>
+      <option value="53">Box Kitchen</option>
+      <option value="54">Cocobang</option>
+      <option value="55">Rambler</option>
+      <option value="56">Bazille</option>
+      <option value="57">Lao Table</option>
+      <option value="58">Bar 587</option>
+      <option value="59">Tratto</option>
+      <option value="60">Amber India</option>
+      <option value="61">Beanstalk Cafe</option>
+      <option value="62">Barnzu</option>
+      <option value="63">Biscuits & Blues</option>
+      <option value="64">Hashiri</option>
+      <option value="65">The Halal Guys - San Francisco</option>
+      <option value="66">Marlowe</option>
+      <option value="67">Kusina Ni Tess</option>
+      <option value="68">Katana-Ya</option>
+      <option value="69">Sutter St. Cafe</option>
+      <option value="70">Aquitaine</option>
+      <option value="71">SF Chickenbox</option>
+      <option value="72">The Pawn Shop</option>
+      <option value="73">Ryoko's</option>
+      <option value="74">Food Emporium</option>
+      <option value="75">707 Sutter</option>
+      <option value="76">Sanraku</option>
+      <option value="77">The Douglas Room</option>
+      <option value="78">Kusina Ni Tess</option>
+      <option value="79">Farm : Table</option>
+      <option value="80">RM 212</option>
+      <option value="81">Sutter St. Cafe</option>
+      <option value="82">Barcha</option>
+      <option value="83">Samovar Tea - Yerba Buena Gardens</option>
+      <option value="84">Super Duper Burgers</option>
+      <option value="85">Dirty Habit</option>
+      <option value="86">Biscuits & Blues</option>
+      <option value="87">Tap415</option>
+      <option value="88">Lapisara Eatery</option>
+      <option value="89">Popsons</option>
+      <option value="90">Montesacro Pinseria SF</option>
+      <option value="91">Buckhorn Grill - San Francisco</option>
+      <option value="92">Hashiri</option>
+      <option value="93">The Cheesecake Factory</option>
+      <option value="94">White Horse Tavern & Restaurant</option>
+      <option value="95">Working Girls' Cafe</option>
+      <option value="96">Burger Bar</option>
+      <option value="97">Zero Zero</option>
+      <option value="98">Pinecrest Diner</option>
+      <option value="99">SF Chickenbox</option>
+      <option value="100">Gibson</option>
+
+      </select>
+ 
+      <input type="date" name= "date2"/>
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Third restaurant
+      <select name=restaurant3id>
+      <option value="">--Please choose an option--</option>
+      <option value="1">Tacorea</option> 
+      <option value="2">DeLaRosa</option> 
+      <option value="3">Hogwash</option> 
+      <option value="4">Kin Khao</option> 
+      <option value="5">Hops & Hominy</option> 
+      <option value="6">The View Lounge</option>
+      <option value="7">Fifth Arrow</option>
+      <option value="8">Urban Tavern</option>
+      <option value="9">Hopwater Distribution</option>
+      <option value="10">ONE65 Bistro & Grill</option>
+      <option value="11">Amami</option>
+      <option value="12">Tropisueno</option>
+      <option value="13">O' by Claude Le Tohic</option>
+      <option value="14">Bartlett Hall</option>
+      <option value="15">Akiko's Restaurant</option>
+      <option value="16">Farallon</option>
+      <option value="17">Super Duper Burgers</option>
+      <option value="18">Mikkeller Bar</option>
+      <option value="19">Burma Club</option>
+      <option value="20">E&O Kitchen and Bar</option>
+      <option value="21">Hakkasan</option>
+      <option value="22">La Marsa</option>
+      <option value="23">he Rotunda</option>
+      <option value="24">Sushi Nagai</option>
+      <option value="25">Liholiho Yacht Club</option>
+      <option value="26">Bota Tapas & Paella Bar</option>
+      <option value="27">Bouche</option>
+      <option value="28">Ippudo San Francisco</option>
+      <option value="29">M.Y. China</option>
+      <option value="30">Matador</option>
+      <option value="31">Waystone</option>
+      <option value="32">Last Drop Tavern</option>
+      <option value="33">Rooster & Rice</option>
+      <option value="34">Honey Honey Cafe and Crepery</option>
+      <option value="35">Oren's Hummus</option>
+      <option value="36">Little Sheep Mongolian Hot Pot</option>
+      <option value="37">The Cavalier</option>
+      <option value="38">The Bird</option>
+      <option value="39">Colibri Mexican Bistro</option>
+      <option value="40">PianoFight</option>
+      <option value="41">The Keystone</option>
+      <option value="42">Ayala Restaurant</option>
+      <option value="43">54 Mint - Ristorante Italiano</option>
+      <option value="44">Johnny Foley's</option>
+      <option value="45">Braised + Bread</option>
+      <option value="46">Mensho Tokyo</option>
+      <option value="47">Bluestem Brasserie</option>
+      <option value="48">Tselogs</option>
+      <option value="49">Little Delhi</option>
+      <option value="50">King Of Thai Noodle House</option>
+      <option value="51">Taqueria Castillo Mason</option>
+      <option value="52">Del Popolo</option>
+      <option value="53">Box Kitchen</option>
+      <option value="54">Cocobang</option>
+      <option value="55">Rambler</option>
+      <option value="56">Bazille</option>
+      <option value="57">Lao Table</option>
+      <option value="58">Bar 587</option>
+      <option value="59">Tratto</option>
+      <option value="60">Amber India</option>
+      <option value="61">Beanstalk Cafe</option>
+      <option value="62">Barnzu</option>
+      <option value="63">Biscuits & Blues</option>
+      <option value="64">Hashiri</option>
+      <option value="65">The Halal Guys - San Francisco</option>
+      <option value="66">Marlowe</option>
+      <option value="67">Kusina Ni Tess</option>
+      <option value="68">Katana-Ya</option>
+      <option value="69">Sutter St. Cafe</option>
+      <option value="70">Aquitaine</option>
+      <option value="71">SF Chickenbox</option>
+      <option value="72">The Pawn Shop</option>
+      <option value="73">Ryoko's</option>
+      <option value="74">Food Emporium</option>
+      <option value="75">707 Sutter</option>
+      <option value="76">Sanraku</option>
+      <option value="77">The Douglas Room</option>
+      <option value="78">Kusina Ni Tess</option>
+      <option value="79">Farm : Table</option>
+      <option value="80">RM 212</option>
+      <option value="81">Sutter St. Cafe</option>
+      <option value="82">Barcha</option>
+      <option value="83">Samovar Tea - Yerba Buena Gardens</option>
+      <option value="84">Super Duper Burgers</option>
+      <option value="85">Dirty Habit</option>
+      <option value="86">Biscuits & Blues</option>
+      <option value="87">Tap415</option>
+      <option value="88">Lapisara Eatery</option>
+      <option value="89">Popsons</option>
+      <option value="90">Montesacro Pinseria SF</option>
+      <option value="91">Buckhorn Grill - San Francisco</option>
+      <option value="92">Hashiri</option>
+      <option value="93">The Cheesecake Factory</option>
+      <option value="94">White Horse Tavern & Restaurant</option>
+      <option value="95">Working Girls' Cafe</option>
+      <option value="96">Burger Bar</option>
+      <option value="97">Zero Zero</option>
+      <option value="98">Pinecrest Diner</option>
+      <option value="99">SF Chickenbox</option>
+      <option value="100">Gibson</option>
+
+      </select>
+      
+      <input type="date" name= "date3"/>
+    </label>
+  </div>
+
   
-<input type="radio" name="upset_stomach" id="upset_stomach" value="upset Stomach">
-<label for="upset_stomach">Upset Stomach</label>
-<input type="radio" name="stomach_cramps" id="stomach_cramps" value="stomach_cramps">
-<label for="stomach_cramps">Stomach Cramps</label>
-<input type="radio" name="nausea" id="nausea" value="nausea">
-<label for="nausea">Nausea</label>
-<input type="radio" name="vomiting" id="vomiting" value="vomiting">
-<label for="vomiting">Vomiting</label>
-<input type="radio" name="diarrhea" id="diarrhea" value="diarrhea">
-<label for="diarrhea">Diarrhea</label>
-<input type="radio" name="fever" id="fever" value="fever">
-<label for="fever">Fever</label>
 
   <div>
     <input type="submit" value="Submit">
   </div>
 
-  
-  </div>
+</h5>
 
 </form>
 </HTML>

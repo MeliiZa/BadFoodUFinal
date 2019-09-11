@@ -1,10 +1,9 @@
-"""Movie Ratings."""
 
 from jinja2 import StrictUndefined
 
 from flask import Flask, render_template, request, flash, redirect, session
 from flask_debugtoolbar import DebugToolbarExtension
-
+from secret import keys
 from model import connect_to_db, db, User, Restaurant, Incident
 
 
@@ -16,8 +15,14 @@ app.secret_key = "ABC"
 # Normally, if you use an undefined variable in Jinja2, it fails silently.
 # This is horrible. Fix this so that, instead, it raises an error.
 app.jinja_env.undefined = StrictUndefined
+@app.route('/landingpage')
+def landing():
+    """landingpage."""
+
+    return render_template("landingpage.html")
 
 
+print("primer print")
 @app.route('/')
 def index():
     """Homepage."""
@@ -37,6 +42,7 @@ def register_process():
     """Process registration."""
 
     # Get form variables
+    
     name = request.form.get("name")
     lastname = request.form.get("lastname")
     email = request.form.get("email")
@@ -45,13 +51,14 @@ def register_process():
   
 
 
-    new_user = User(name=name, lastname=lastname, email=email, password=password)
+    new_user = User( name=name, lastname=lastname, email=email, password=password)
 
     db.session.add(new_user)
     db.session.commit()
+    db.session.refresh(new_user)
 
     flash(f"User {email} added.")
-    return redirect(f"/users/{new_user.user_id}")
+    return redirect(f"/incident")
 
 
 @app.route('/login', methods=['GET'])
@@ -85,13 +92,22 @@ def login_process():
     return redirect(f"/users/{user.user_id}")
 
 
-# @app.route('/logout')
-# def logout():
-#     """Log out."""
+@app.route('/users/<int:user_id>')
+def user_info(user_id):
 
-#     del session["user_id"]
-#     flash("Logged Out.")
-#     return redirect("/")
+    user= User.query.get(user_id)
+
+    return render_template("userinfo.html", user=user)
+
+
+
+@app.route('/logout')
+def logout():
+    """Log out."""
+
+    del session["user_id"]
+    flash("Logged Out.")
+    return redirect("/")
 
 
 # @app.route('/decision', methods=['GET'])
@@ -100,43 +116,61 @@ def login_process():
 #     return render_template("decision.html")
 
 
-# @app.route('/incident', methods=['GET'])
-# def incident_form():
-#     """Show login form."""
-
-#     return render_template("incident_form.html")
-
-
-@app.route('/incident', methods=['GET','POST'])
+@app.route('/incident', methods=['GET'])
 def incident_form():
+    """Show login form."""
+    print("get inicident")
+    return render_template("incident_form.html")
 
+
+@app.route('/incident', methods=['POST'])
+def incident():
+    print("Hi") 
     """Process registration."""
-    if flask.request.method == "GET":
-        return render_template("incident_form.html")
-    else:    
     # Get form variables
-        upset_stomach = incident.form["upset_stomach"]
-        stomach_cramps = incident.form["stomach_cramps"]
-        nausea = incident.form["nausea"]
-        vomiting = incident.form["vomiting"]
-        diarrhea = incident.form["diarrhea"]
-        fever = incident.form["fever"]
+    user_id=session["user_id"]
+    upset_stomach = request.form.get("upset_stomach")
+    stomach_cramp = request.form.get("stomach_cramp")
+    nausea = request.form.get("nausea")
+    vomiting = request.form.get("vomiting")
+    diarrhea = request.form.get("diarrhea")
+    fever = request.form.get("fever")
+    restaurant1id = request.form.get("restaurant1id")
+    restaurant2id = request.form.get("restaurant2id")
+    restaurant3id = request.form.get("restaurant3id")
+    date1= request.form.get("date1")
+    date2= request.form.get("date2")
+    date3= request.form.get("date3")
 
-        new_input = Incident(upset_stomach=upset_stomach,stomach_cramps=stomach_cramps, nausea=nausea,vomiting=vomiting, diarrhea=diarrhea, fever=fever )
+    new_input = Incident(user_id=user_id,upset_stomach=upset_stomach,stomach_cramp=stomach_cramp,
+      nausea=nausea,vomiting=vomiting, diarrhea=diarrhea, fever=fever, 
+     restaurant1id = restaurant1id, restaurant2id= restaurant2id, restaurant3id=restaurant3id,
+     date1= date1, date2=date2, date3=date3)
+    print("Hi")     
 
-        db.session.add(incident)
-        db.session.commit()
+    db.session.add(new_input)
+    db.session.commit()
 
-        flash(f"Symptoms added to your report")
-    return redirect(f"/moredetails")
+    flash(f"Symptoms added to your report")
+    return render_template("thanks.html")
 
-@app.route('/moredetails', methods=['GET'])
-def moredetails():
+#@app.route('/moredetails', methods=['GET'])
+#def moredetails():
     
-    return render_template ("moredetails_form.html")
+#    return render_template ("thanks.html")
 
+@app.route('/thanks', methods=['GET'])
+def thanks():
+    """Show thanks."""
 
+    return render_template("thanks.html")
 
+@app.route('/map', methods=['GET'])
+def map():
+    """Show thanks."""
+
+    return render_template("map.html",google_map_api=keys['google_map_api']
+)
 # @app.route('/login', methods=['GET'])
 # def login_form():
 #     """Show login form."""
@@ -171,7 +205,7 @@ if __name__ == "__main__":
     # that we invoke the DebugToolbarExtension
 
     # Do not debug for demo
-    app.debug = True
+    app.debug = False
 
     connect_to_db(app)
 

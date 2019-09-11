@@ -1,0 +1,321 @@
+{% extends 'base.html'%}
+{% block title %} BadFoodU {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset= "ut-8">
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 80%;
+        width: 75;
+        margin:40;
+        padding:40;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 80%;
+        margin: 70;
+        padding: 70;
+      }
+    </style>
+
+</head>
+<body>
+
+
+<div id="map"></div>
+<!--Google Maps scripts -->
+<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 37.7880, lng: -122.4075},
+          zoom: 17
+        });
+
+        var iconBase =
+            'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
+
+        var icons = {
+          badfoodu: {
+            icon: '/static/images/BFUlogochiquito.png'
+  
+          }
+        }
+
+        var features = [
+          {
+            position: new google.maps.LatLng(37.7898,-122.4107),
+            type: 'badfoodu',
+            name: 'Tacorea'
+            // Create Tacorea.
+          }, {
+            position: new google.maps.LatLng(37.7855, -122.4042),
+            type: 'badfoodu'
+            // Create Delarosa.
+          }, {
+            position: new google.maps.LatLng(37.7892, -122.4099),
+            type: 'badfoodu'
+            // Create Hogwash.
+          }, {
+            position: new google.maps.LatLng(37.7852, -122.4094),
+            type: 'badfoodu'
+            // Create Kin Khao.
+          }, {
+            position: new google.maps.LatLng(37.7893, -122.4058),
+            type: 'badfoodu'
+            // Create Hops & Homin.
+          }, {
+            position: new google.maps.LatLng(37.7852, -122.4045),
+            type: 'badfoodu'
+            // Create The View.
+          }, {
+            position: new google.maps.LatLng(37.7876, -122.4098),
+            type: 'badfoodu'
+            // Create Fifth Arrow.
+          }, {
+            position: new google.maps.LatLng(37.7860, -122.4104),
+            type: 'badfoodu'
+            // Create Urban Tavern.
+          }, {
+            position: new google.maps.LatLng(37.7900, -122.4113),
+            type: 'badfoodu'
+            // Create Hopwater.
+          }, {
+            position: new google.maps.LatLng(37.7862, -122.4074),
+            type: 'badfoodu'
+            // Create One65.
+          }, {
+            position: new google.maps.LatLng(37.7872, -122.4104),
+            type: 'badfoodu'
+            // Create Amami.
+          }, {
+            position: new google.maps.LatLng(37.7855328,-122.40403),
+            type: 'badfoodu'
+            // Create Tropisueno.
+          }, {
+            position: new google.maps.LatLng(37.7862, -122.4074),
+            type: 'badfoodu'
+            // Create O' by Claude Le Tohic.
+          }, {
+            position: new google.maps.LatLng(37.7866, -122.4088),
+            type: 'badfoodu'
+            // Create Bartlett.
+          }, {
+            position: new google.maps.LatLng(37.7906, -122.4047),
+            type: 'badfoodu'
+            // Create Akiko Restaurant.
+          }, {
+            position: new google.maps.LatLng(37.788312,-122.408909),
+            type: 'badfoodu'
+            // Create Farallon.
+          }, {
+            position: new google.maps.LatLng(37.7928, -122.3941),
+            type: 'badfoodu'
+            // Create SuperDuper Burgers.
+          }, {
+            position: new google.maps.LatLng(37.7840, -122.4091),
+            type: 'badfoodu'
+            // Create Mikkeller Bar.
+          }, {
+            position: new google.maps.LatLng(37.7829, -122.4079),
+            type: 'badfoodu'
+            // Create BurmaClub.
+          }, {
+            position: new google.maps.LatLng(37.7896936,-122.4058624),
+            type: 'badfoodu'
+            // Create E&O Kitchen and Bar.
+          }, {
+            position: new google.maps.LatLng(37.7878, -122.4036),
+            type: 'badfoodu'
+            // Create Hakkasan.
+          }, {
+            position: new google.maps.LatLng(37.7871167,-122.4107795),
+            type: 'badfoodu'
+            // Create La Marsa.
+          }, {
+            position: new google.maps.LatLng(37.7874065,-122.4064525),
+            type: 'badfoodu'
+            // Create The Rotunda.
+          }, {
+            position: new google.maps.LatLng(37.796576,-122.4084202),
+            type: 'badfoodu'
+            // Create Sushi Nagai.
+          }, {
+            position: new google.maps.LatLng(37.7882259,-122.4146212),
+            type: 'badfoodu'
+            // Create Liholiho.
+          }, {
+            position: new google.maps.LatLng(37.7870546,-122.41127),
+            type: 'badfoodu'
+            // Create Bota Tapas & Paella Bar.
+          }, {
+            position: new google.maps.LatLng(37.7902372,-122.4073165),
+            type: 'badfoodu'
+            // Create Bouche.
+          }, {
+            position: new google.maps.LatLng(37.7860774,-122.4045607),
+            type: 'badfoodu'
+            // Create Ippudo.
+          }, {
+            position: new google.maps.LatLng(37.7835636,-122.4070397),
+            type: 'badfoodu'
+            // Create M.Y. China.
+          }, {
+            position: new google.maps.LatLng(37.7887552,-122.4115279),
+            type: 'badfoodu'
+            // Create Matador.
+          }, {
+            position: new google.maps.LatLng(37.7831703,-122.4088801),
+            type: 'badfoodu'
+            // Create Waystone
+          }, {
+            position: new google.maps.LatLng(37.7898114,-122.4086096),
+            type: 'badfoodu'
+            // Create Last Drop Tavern.
+          }, {
+            position: new google.maps.LatLng(37.7886849,-122.41153109999999),
+            type: 'badfoodu'
+            // Create Rooster & Rice.
+          }, {
+            position: new google.maps.LatLng(37.7878798,-122.4109841),
+            type: 'badfoodu'
+            // Create Honey Honey Cafe.
+          }, {
+            position: new google.maps.LatLng(37.7865565,-122.4022717),
+            type: 'badfoodu'
+            // Create Oren's Hummus.
+          }, {
+            position: new google.maps.LatLng(37.7872666,-122.4100026),
+            type: 'badfoodu'
+            // Create Little Sheep Mongolian Hot Pot.
+          }, {
+            position: new google.maps.LatLng(37.7835175,-122.4068706),
+            type: 'badfoodu'
+            // Create The Cavalier.
+          }, {
+            position: new google.maps.LatLng(37.7871861,-122.40002),
+            type: 'badfoodu'
+            // Create The Bird.
+          }, {
+            position: new google.maps.LatLng(37.7871782,-122.4107004),
+            type: 'badfoodu'
+            // Create The Colibri.
+          }, {
+            position: new google.maps.LatLng(37.7837503,-122.4107222),
+            type: 'badfoodu'
+            // Create PianoFight.
+          }, {
+            position: new google.maps.LatLng(37.7848806,-122.4051376),
+            type: 'badfoodu'
+            // Create The Keystone.
+          }, {
+            position: new google.maps.LatLng(37.7873695,-122.4096515),
+            type: 'badfoodu'
+            // Create Ayala Restaurant.
+          }, {
+            position: new google.maps.LatLng(37.782693,-122.4079982),
+            type: 'badfoodu'
+            // Create 54 Mint.
+          }, {
+            position: new google.maps.LatLng(37.7862372,-122.4087519),
+            type: 'badfoodu'
+            // Create Johnny Foley's.
+          }, {
+            position: new google.maps.LatLng(37.7890922,-122.4021417),
+            type: 'badfoodu'
+            // Create Braised + Bread.
+          }, {
+            position: new google.maps.LatLng(37.7890922,-122.4021417),
+            type: 'badfoodu'
+            // Create Mensho Tokyo.
+          }, {
+            position: new google.maps.LatLng(37.7855328,-122.40403),
+            type: 'badfoodu'
+            // Create Bluestem Brasserie.
+          }, {
+            position: new google.maps.LatLng(37.7864572,-122.4130006),
+            type: 'badfoodu'
+            // Create Tselogs.
+          }, {
+            position: new google.maps.LatLng(37.7818247,-122.4122742),
+            type: 'badfoodu'
+            // Create Little Delhi.
+          }, {
+            position: new google.maps.LatLng(37.786587,-122.4077192),
+            type: 'badfoodu'
+            // Create King of Thai.
+          }, {
+            position: new google.maps.LatLng(37.7898,-122.4107),
+            type: 'badfoodu'
+            // Create markers.
+          }, {
+            position: new google.maps.LatLng(),
+            type: 'badfoodu'
+            // Create markers.
+          }, {
+            position: new google.maps.LatLng(),
+            type: 'badfoodu'
+            // Create markers.
+          }, {
+            position: new google.maps.LatLng(),
+            type: 'badfoodu'
+            // Create markers.
+          }, {
+            position: new google.maps.LatLng(),
+            type: 'badfoodu'
+            // Create markers.
+          }, {
+            position: new google.maps.LatLng(),
+            type: 'badfoodu'
+            // Create markers.
+          }, {
+            position: new google.maps.LatLng(),
+            type: 'badfoodu'
+            // Create markers.
+          }, {
+            position: new google.maps.LatLng(),
+            type: 'badfoodu'
+            // Create markers.
+          }, {
+            position: new google.maps.LatLng(),
+            type: 'badfoodu'
+            // Create markers.
+          }]
+
+        for (var i = 0; i < features.length; i++) {
+          var infowindow = new google.maps.InfoWindow({
+            content: '<h2> hi </h2>'
+          });
+          var marker = new google.maps.Marker({
+            position: features[i].position,
+            icon: icons[features[i].type].icon,
+            map: map
+          });
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+              marker.setMap(map);
+
+        }
+
+//     // To add the marker to the map, call setMap();
+}
+    
+</script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key={{google_map_api}}&callback=initMap"
+    async defer>
+</script>
+
+</body>
+</html>
+{% endblock %}

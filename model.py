@@ -45,6 +45,7 @@ class Restaurant(db.Model):
                           primary_key=True)
     restaurant_name = db.Column(db.String(2000))
     location= db.Column(db.String(4000))
+    zone= db.Column(db.String(4000))
     latitude = db.Column(db.Integer)
     longitud = db.Column(db.Integer)
     
@@ -57,22 +58,24 @@ class Restaurant(db.Model):
                    restaurant_name={self.restaurant_name} 
                    location={self.location}>"""
 
-
 class Incident(db.Model):
 
     __tablename__ = "incident"
-
-    incident_id= db.Column(db.Integer,autoincrement=True, primary_key=True,)
+    
+    incident_id = db.Column(db.Integer,autoincrement=True, primary_key=True,)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
     upset_stomach = db.Column(db.String(30))
     stomach_cramp = db.Column(db.String(30))
     nausea = db.Column(db.String(30))
     vomiting = db.Column(db.String(30))
     diarrhea = db.Column(db.String(30))
     fever = db.Column(db.String(30))
-    restaurant_id = db.Column(db.Integer, nullable= False)
-    user_id = db.Column(db.Integer, nullable= False)
-    date = db.Column(db.DateTime)
-
+    restaurant1id = db.Column(db.Integer)
+    restaurant2id = db.Column(db.Integer)
+    restaurant3id = db.Column(db.Integer)
+    date1 = db.Column(db.DateTime)
+    date2 = db.Column(db.DateTime)
+    date3 = db.Column(db.DateTime)
 
 #####################################################################
 # Helper functions
@@ -91,7 +94,6 @@ if __name__ == "__main__":
     # As a convenience, if we run this module interactively, it will
     # leave you in a state of being able to work with the database
     # directly.
-
     from server import app
     connect_to_db(app)
     print("Connected to DB.")

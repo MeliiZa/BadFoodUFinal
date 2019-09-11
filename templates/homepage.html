@@ -1,6 +1,39 @@
-<hmtl>
+{% extends 'base.html'%}
+{% block title %} BadFoodU {% endblock %}
 
-<h1>Welcome</h1>
+{% block content %}
+<html>
+<head>
+
+  </head>
+<style>
+  body{
+    height:80%;
+
+  }
+</style>
+<body>
+
+<h1>Welcome to BadFoodU</h1>
+
+
+
+<form action="/login" method="POST">
+        <h2> Log In </h2>
+        <label>
+        Email
+      <input type="email" name="email">
+          <label>
+      Password
+      <input type="password" name="password">
+    </label>
+        <button> Log In </button>
+      </label>
+    </div>
+    </div>
+</form>
+
+<h2> or Register!</h2>
 
 <form action="/register" method="POST">
 
@@ -31,7 +64,12 @@
 
     <input type="submit" value="Register">
   </div>
-
 </form>
+</label>
+</div>
+</form>
+</body>
 
-</hmtl>
+
+
+{% endblock %}

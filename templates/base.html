@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+   <title>{% block title %}{% endblock %}</title>
+
+  
+
+
+    <!-- Main Navigation -->
+    <header>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+         <a class="navbar-brand" href="/">BadFoodU </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+         </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/homepage">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/incident">Your Symptoms</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/map">View Map</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/aboutus">About Us</a>
+      </li>
+    </ul>
+  </div>
+        </nav>
+
+    <!--Mask-->
+    <div id = "intro" class="view"> 
+      
+      <div class="full-bg-img">
+
+<style>
+  h3{
+    margin: 120px;
+    padding: 0px;
+  }
+</style>
+    <!-- Main Layout-->
+    <main>
+      </div> 
+ <!-- Mask & flexbox options-->
+            <div id = "mask" class="mask rgba-gradient d-flex justify-content-center align-items-center">
+                <!-- Content -->
+                <div  class="container">
+                    <!--Grid row-->
+                    <div class="row wow fadeIn">
+
+                        <!--Grid column-->
+                        <div class="col-4">
+                          <img id='logo' src ="/static/images/BFUfrontpage.png">
+                        </div>
+
+                        <div class="col-md-4 white-text text-center wow fadeIn">
+
+
+
+
+                            <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5 ">BadFoodU</h3>
+                            <hr class="hr-light my-4 w-75">
+                            <div class = "row">
+                            <h4 class="subtext-header mt-2 mb-4">Feeling sick? Enter your symptoms.<br> Help the community.</br></h4>
+                          </div>
+                          <div class='text-center'>
+                            <button class='button' onclick="window.location.href='/incident';" type="button" class="btn btn-secondary btn-lg">Enter your Symptoms</button>
+                                <button class='button' onclick="window.location.href='/map';" type="button" class="btn btn-secondary btn-lg">View Map</button>                          
+                          </div>
+
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+    </div>
+    <!--Mask-->
+
+    </header>
+
+    </main>
+
+
+    <!--Footer -->
+    <footer>
+        
+    </footer>
+
+  
+    <!-- Load React dependencies on all pages for this app. -->
+
+    {% block js %}
+    <div id="root"></div>
+   {% endblock %}
+</head>
+<body>
+    
+    {% if "user_id" in session %}
+        <a href="/logout">Logout</a>
+    {% endif %}
+    
+    <hr>
+    
+    <ul>
+        {% for message in get_flashed_messages() %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    
+    
+    {% block content %}
+    {% endblock %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+<ul>
+  <li>
+    <img class='symptoms'>
+  </li>
+  <li>
+    <img class='symptoms'>
+  </li>
+</ul>
+
+
+
+<!--function symptomClickHandler(e) {
+  // add or remove a class from the IMG that was clicked
+  // add or remove information indicating its been clicked 
+  .data('clicked', true)
+  .data('clicked') 
+}
+
+.clickedSymption {
+  border: red 5px;
+} -->

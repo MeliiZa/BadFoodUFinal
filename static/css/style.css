@@ -1,0 +1,65 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+
+body {
+    margin: 0;
+    font-family: coolvetica;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+    background-color: #27282d;
+}
+
+#logo {
+  vertical-align: middle;
+    margin-top: 60px;
+    border-style: none;
+    margin-left: 320px;
+    height: 250px;
+
+}
+
+.display-3{
+  text-align: left;
+  margin-left: 60px;
+  margin-top: 150px;
+}
+
+.subtext-header{
+  margin-top: 10px;
+  text-align: middle;
+}
+
+.text-center{
+  margin-bottom: 50px;
+}
+
+
