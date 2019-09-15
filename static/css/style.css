@@ -62,4 +62,13 @@ body {
   margin-bottom: 50px;
 }
 
-
+body {
+    margin: 0;
+    font-family: coolvetica;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+    background-color: #27282d;
+}
