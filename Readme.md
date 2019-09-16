@@ -1,4 +1,4 @@
-# <img src="static/images/BFUheader.jpg">
+# <img src="/static/images/BFUheader.png">
 
 Description of BadFoodU
 
