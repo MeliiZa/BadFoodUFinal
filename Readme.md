@@ -2,7 +2,7 @@
 
 Description of BadFoodU
 
-## Table of Contents🐛
+## Table of Contents🍔
 
 * [Tech Stack](#tech-stack)
 * [Features](#features)
@@ -89,8 +89,8 @@ $ python -i model.py
 ```
 
 ## <a name="future"></a>TODO✨
-* Add ability for users to search for specific restaurants
-* Add history for users
-* Show labels on Google Maps markers that show number of ocurrences
-* Add page of Top Restaurants with ocurrences added
-* Add page so users can send us suggestions
+* 🍔 Add ability for users to search for specific restaurants
+* 🍔 Add history for users
+* 🍔 Show labels on Google Maps markers that show number of ocurrences
+* 🍔 Add page of Top Restaurants with ocurrences added
+* 🍔 Add page so users can send us suggestions
