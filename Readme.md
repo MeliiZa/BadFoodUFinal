@@ -1,6 +1,6 @@
 # <img src="/static/images/BFUheader.png">
 
-Description of BadFoodU
+BadFoodU is a web-based platform that uses crowdsourced data to pinpoint potential sources of food poisoning, and help people avoid getting sick. Users can enter symptoms and information about their most recent restaurant meals, and a map populates with restaurants that users have entered.
 
 ## Table of Contents🍔
 
@@ -8,11 +8,10 @@ Description of BadFoodU
 * [Features](#features)
 * [Setup/Installation](#installation)
 * [To-Do](#future)
-* [License](#license)
 
 ## <a name="tech-stack"></a>Tech Stack
 
-__Frontend:__ HTML5, CSS, Javascript, jQuery, Bootstrap <br/>
+__Frontend:__ HTML, CSS (Flexbox), Javascript, jQuery, Bootstrap <br/>
 __Backend:__ Python, Flask, PostgreSQL, SQLAlchemy <br/>
 __APIs:__ Yelp, Google Maps <br/>
 
@@ -77,15 +76,15 @@ $ createdb users
 ```
 Create your database restaurants and seed🌱 example data.
 ```
-$ python model.py
+$ python3 model.py
 ```
 Run the app from the command line.
 ```
-$ python server.py
+$ python3 server.py
 ```
 If you want to use SQLAlchemy to query the database, run in interactive mode
 ```
-$ python -i model.py
+$ python3 -i model.py
 ```
 
 ## <a name="future"></a>TODO✨
