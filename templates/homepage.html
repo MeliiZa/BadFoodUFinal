@@ -81,58 +81,53 @@
   </div>
  </div>
 </div> -->
-
-
-<form action="/login" method="POST">
+<div class="loginregister">
+  <div class= "loginbox">
+    <form action="/login" method="POST">
         <h2> Log In </h2>
-        <label>
-        Email
-      <input type="email" name="email">
-          <label>
-      Password
-      <input type="password" name="password">
-    </label>
-        <button> Log In </button>
-      </label>
-    </div>
-    </div>
-</form>
+        <input class="inputform emaillogin" type="email" name="email" placeholder="Email">
+        <br>
 
-<h2> or Register!</h2>
+      <input class="inputform between"  type="password" name="password" placeholder="Password"> </br>
+
+        <button class="button2"> Log In </button>
+      </label>
+    
+</form>
+</div>
+<div class= "registerbox">
+<h2> Register</h2>
 
 <form action="/register" method="POST">
 
   <div>
-    <label>
-      Name
-      <input type="name" name="name">
-    </label>
+
+      <input class="inputform" type="name" name="name" placeholder="Name">
+
   </div>  <div>
-    <label>
-      Last Name
-      <input type="lastname" name="lastname">
-    </label>
+
+      <input class="inputform" type="lastname" name="lastname" placeholder="Last name">
+
   </div>
   <div>
-    <label>
-      Email
-      <input type="email" name="email">
-    </label>
+
+      <input class="inputform"  type="email" name="email" placeholder="Email">
+
   </div>
 
   <div>
-    <label>
-      Password
-      <input type="password" name="password">
-    </label>
+      <input class="inputform"  type="password" name="password" placeholder="Password">
+
   </div>
 
-    <input type="submit" value="Register">
+    <input class ="registerbutton" type="submit" value="Register">
   </div>
+</div>
 </form>
 </label>
 </div>
 </form>
+</div>
 </body>
 
 

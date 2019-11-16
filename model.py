@@ -38,7 +38,7 @@ class User(db.Model):
 class Restaurant(db.Model):
     """Rating of a movie by a user."""
 
-    __tablename__ = "restaurant"
+    __tablename__ = "restaurants"
 
     restaurant_id = db.Column(db.Integer,
                           autoincrement=True,
@@ -46,21 +46,21 @@ class Restaurant(db.Model):
     restaurant_name = db.Column(db.String(2000))
     location= db.Column(db.String(4000))
     zone= db.Column(db.String(4000))
-    latitude = db.Column(db.Integer)
-    longitud = db.Column(db.Integer)
+    latitude = db.Column(db.String(4000))
+    longitude = db.Column(db.String(4000))
     
 
-    def __repr__(self):
-        """Provide helpful representation when printed."""
+    # def __repr__(self):
+    #     """Provide helpful representation when printed."""
 
-        return f"""<Restaurant restaurant_id={self.restaurant_id} 
-                   restaurant_id={self.restaurant_id} 
-                   restaurant_name={self.restaurant_name} 
-                   location={self.location}>"""
+    #     return f"""<Restaurant restaurant_id={self.restaurant_id} 
+    #                restaurant_id={self.restaurant_id} 
+    #                restaurant_name={self.restaurant_name} 
+    #                location={self.location}>"""
 
 class Incident(db.Model):
 
-    __tablename__ = "incident"
+    __tablename__ = "incidents"
     
     incident_id = db.Column(db.Integer,autoincrement=True, primary_key=True,)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
@@ -70,12 +70,9 @@ class Incident(db.Model):
     vomiting = db.Column(db.String(30))
     diarrhea = db.Column(db.String(30))
     fever = db.Column(db.String(30))
-    restaurant1id = db.Column(db.Integer)
-    restaurant2id = db.Column(db.Integer)
-    restaurant3id = db.Column(db.Integer)
-    date1 = db.Column(db.DateTime)
-    date2 = db.Column(db.DateTime)
-    date3 = db.Column(db.DateTime)
+    restaurant_id = db.Column(db.Integer, db.ForeignKey('restaurants.restaurant_id'))
+    date = db.Column(db.DateTime)
+
 
 #####################################################################
 # Helper functions

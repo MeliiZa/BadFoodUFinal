@@ -1,0 +1,99 @@
+Tacorea,809 Bush St Lower,Nob Hill,37.789725,-122.4109
+Delarosa,37 Yerba Buena Ln,Union Square,37.7856627,-122.4044407
+Hogwash,582 Sutter St,Union Square,37.7890203,-122.4102667
+Kin Khao,Parc 55 Hotel,55 Cyril Magnin Street,37.7848716,-122.4088244
+Hops & Homin,1 Tillman Pl,Union Square,37.7892717,-122.4057916
+The View Lounge,780 Mission St,Union Square,37.785086,-122.4036447
+Fifth Arrow,430 Mason St,Union Square,37.7876823,-122.409875
+Urban Tavern,333 O'Farrell St,Union Square,37.7848716,-122.4088244
+Hopwater Distribution,850 Bush St,Lower Nob Hill,46.9789858,-122.8790263
+ONE65 Bistro & Grill,165 O'Farrell St,Union Square,37.786348,-122.407866
+Amami,430 Geary Blvd,Union Square,37.7845009,-122.4313903
+Tropisueno,75 Yerba Buena Ln.SoMa,Union Square,37.7855328,-122.40403
+O' by Claude Le Tohic,165 O'Farrell St,Union Square,37.786348,-122.407866
+Bartlett Hall,242 O'Farrell St,Union Square,37.786348,-122.407866
+Akiko's Restaurant,431 Bush St,Financial District,37.7905795,-122.4046791
+Farallon,450 Post St,Union Square,37.788312,-122.408909
+Super Duper Burgers,721 Market St,Union Square,37.7869373,-122.4040148
+Mikkeller Bar, 34 Mason St, Union Square,37.7839535,-122.4090957
+Burma Club, 8 Mint Plz,Union Square,37.7832401,-122.4073981
+E&O Kitchen and Bar,314 Sutter St, Union Square,37.7896936,-122.4058624
+Hakkasan,1 Kearny St, Union Square,37.7876938,-122.4039915
+La Marsa,454 Geary St,Union Square,37.7871167,-122.4107795
+The Rotunda,150 Stockton Street,Union Square,37.7874065,-122.4064525
+Sushi Nagai,125 Ellis St,Union Square,37.796576,-122.4084202
+Liholiho Yacht Club,871 Sutter St,Lower Nob Hill,37.7882259,-122.4146212
+Bota Tapas & Paella Bar,490 Geary Street,Union Square,37.7870546,-122.41127
+Bouche,603 Bush St,Union Square,37.7902372,-122.4073165
+Ippudo San Francisco,18 Yerba Buena Ln,Union Square,37.7860774,-122.4045607
+M.Y. China,865 Market Street,Union Square,37.7835636,-122.4070397
+Matador,679 Sutter St,Lower Nob Hill,37.7887552,-122.4115279
+Waystone,992 Market St,Union Square,37.7831703,-122.4088801
+Last Drop Tavern,550 Powell St,Union Square,37.7898114,-122.4086096
+Rooster & Rice,125 Kearny St,Union Square,37.7886849,-122.411531099999
+Honey Honey Cafe and Crepery,599 Post St,Lower Nob Hill,37.7878798,-122.4109841
+Oren's Hummus,71 3rd St,Financial District,37.7865565,-122.4022717
+Little Sheep Mongolian Hot Pot,405 Mason St,Union Square,37.7872666,-122.4100026
+The Cavalier,360 Jessie St,Union Square,37.7835175,-122.4068706
+The Bird,115 New Montgomery St,Financial District,37.7871861,-122.40002
+Colibri Mexican Bistro,440 Geary Street,Union Square,37.7871782,-122.4107004
+PianoFight,144 Taylor St,Union Square,37.7837503,-122.4107222
+The Keystone,54 4th Street,Union Square,37.7848806,-122.4051376
+Ayala Restaurant,398 Geary St,Union Square,37.7873695,-122.4096515
+54 Mint - Ristorante Italiano,16 Mint Plz,SoMa,37.782693,-122.4079982
+Johnny Foley's,243 O'Farrell St,Union Square,37.7862372,-122.4087519
+Braised + Bread,50 Post St 3rd Fl,Financial District,37.7890922,-122.4021417
+Mensho Tokyo,672 Geary St,Lower Nob Hill,37.7890922,-122.4021417
+Bluestem Brasserie, One Yerba Buena Ln,Union Square,37.7855328,-122.40403
+Tselogs,552 Jones St,Tenderloin,37.7864572,-122.4130006
+Little Delhi,83 Eddy St,Union Square,37.7818247,-122.4122742
+King Of Thai Noodle House,184 O'Farrell St,Union Square,37.786587,-122.4077192
+Taqueria Castillo Mason,10 Mason St,Union Square,37.7838171,-122.4090682
+Del Popolo,855 Bush St,Lower Nob Hill,37.7897558,-122.4113062
+Box Kitchen,431 Natoma St,SoMa,37.7897558,-122.4113062
+Cocobang,550 Taylor St,Lower Nob Hill,37.7876755,-122.4117675
+Rambler,545 Post St - San Francisco,Union Square,37.7876755,-122.4117675
+Bazille,865 Market St,Union Square,37.7835636,-122.4070397
+Lao Table,149 2nd St,Financial District,37.787437,-122.398835
+Bar 587,587 Post St,Union Square,37.7878074,-122.4113041
+Tratto,501 Geary St,Tenderloin,37.7866329,-122.4119521
+Amber India,25 Yerba Buena Ln,Union Square,37.7859208,-122.4046707
+Beanstalk Cafe,724 Bush St,Union Square,37.7885134,-122.4217767
+Barnzu,711 Geary St,Tenderloin,37.7863883,-122.4150609
+Biscuits & Blues,401 Mason St,Union Square,37.7873325,-122.4100567
+Hashiri,4 Mint Plz,Union Square,37.7830438,-122.4076714
+The Halal Guys - San Francisco,336 O'Farrell St,Union Square,37.786221,-122.4102029
+Marlowe,500 Brannan St,Mission Bay,37.7783536,-122.3967988
+Kusina Ni Tess,237 Ellis St,Union Square,37.7873317,-122.4066477
+Katana-Ya,422 Geary St,Union Square,37.7872217,-122.4102819
+Sutter St. Cafe,450 Sutter St,Union Square,37.7894328,-122.4078657
+Aquitaine,175 Sutter St,Financial District,37.7897985,-122.4034266
+SF Chickenbox,1123 Folsom St,SoMa,37.7761609,-122.4083622
+The Pawn Shop,993 Mission St,SoMa,37.781067,-122.4083594
+Ryoko's,619 Taylor St ,Lower Nob Hill,37.7882028,-122.4118908
+Food Emporium,865 Market Street,Union Square,37.7882028,-122.4118908
+707 Sutter,707 Sutter St,Lower Nob Hill,37.7885587,-122.4121153
+Sanraku,704 Sutter St,Lower Nob Hill,37.7888764,-122.4124252
+The Douglas Room,345 Taylor St,Tenderloin,37.7888764,-122.4124252
+Kusina Ni Tess,237 Ellis St,Union Square,37.7873317,-122.4066477
+Farm : Table,754 Post St,Lower Nob Hill,37.7876848,-122.4143208
+RM 212,690 Sacramento St,Financial District,37.7936768,-122.4044045
+Sutter St. Cafe,450 Sutter St,Union Square,37.7894328,-122.4078657
+Barcha,28 Fremont St,Union Square,37.791252,-122.3978297
+Samovar Tea - Yerba Buena Gardens,730 Howard St,SoMa,37.7842301,-122.40207
+Super Duper Burgers,783 Mission St,SoMa,37.7848683,-122.4035456
+Dirty Habit,12 4th Street,Union Square,37.7852861,-122.4055003
+Biscuits & Blues,401 Mason St,Union Square,37.7873325,-122.4100567
+Tap415,865 Market Street,Union Square,37.7835636,-122.4070397
+Lapisara Eatery,698 Post St,Lower Nob Hill,35.6450527,139.25253
+Popsons,998 Market St,Tenderloin,37.7831555,-122.4088989
+Montesacro Pinseria SF,510 Stevenson St,SoMa,37.7831555,-122.4088989
+Buckhorn Grill - San Francisco,865 Market Street,Union Square,37.7835636,-122.4070397
+Hashiri,4 Mint Plz,Union Square,37.7830438,-122.4076714
+The Cheesecake Factory,251 Geary St,Union Square,37.7871794,-122.4072968
+White Horse Tavern & Restaurant,635 Geary Street,Union Square,37.786574,-122.413726
+Working Girls' Cafe,259 Kearny St,Financial District,37.7904766,-122.404078
+Burger Bar,170 O'Farrell St,Union Square,37.7864433,-122.4100496
+Zero Zero,826 Folsom St,SoMa,37.7816446,-122.402061
+Pinecrest Diner,401 Geary St,Union Square,37.7870044,-122.4099933
+SF Chickenbox,1123 Folsom St,SoMa,37.7761609,-122.4083622

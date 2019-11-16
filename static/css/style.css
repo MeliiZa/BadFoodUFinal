@@ -72,3 +72,56 @@ body {
     text-align: center;
     background-color: #27282d;
 }
+
+.loginbox{
+    background-color: transparent;
+   color: white;
+   padding:20px;
+   border-radius:10px;
+   border:1px solid #fff;
+   height: 350px;
+   margin-right: 60px;
+}
+
+.registerbox{
+    background-color: transparent;
+   color: white;
+   padding:20px;
+   border-radius:10px;
+   border:1px solid #fff;
+   height: 350px;
+}
+
+.loginregister{
+
+    display: flex;
+    margin right: 10px;
+    margin: 50px;
+    justify-content: center;
+
+}
+
+.inputform{
+  border-radius: 8px;
+  margin-top:10px;
+}
+
+.between{
+  margin-top: 10px;
+}
+
+.button2{
+  border-radius: 8px;
+  margin:50px;
+  background-color: white;
+}
+
+.emaillogin{
+  margin-top: 50px;
+}
+
+.registerbutton{
+  border-radius: 8px;
+  margin-top: 10px;
+}
+

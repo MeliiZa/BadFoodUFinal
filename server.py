@@ -15,14 +15,9 @@ app.secret_key = "ABC"
 # Normally, if you use an undefined variable in Jinja2, it fails silently.
 # This is horrible. Fix this so that, instead, it raises an error.
 app.jinja_env.undefined = StrictUndefined
-@app.route('/landingpage')
-def landing():
-    """landingpage."""
-
-    return render_template("landingpage.html")
 
 
-print("primer print")
+
 @app.route('/')
 def index():
     """Homepage."""
@@ -48,17 +43,16 @@ def register_process():
     email = request.form.get("email")
     password = request.form.get("password")
 
-  
-
-
     new_user = User( name=name, lastname=lastname, email=email, password=password)
 
     db.session.add(new_user)
     db.session.commit()
     db.session.refresh(new_user)
 
-    flash(f"User {email} added.")
-    return redirect(f"/incident")
+    flash(f"Email {email} added.")
+
+    return render_template("userinfo.html", new_user = new_user)
+
 
 
 @app.route('/login', methods=['GET'])
@@ -97,7 +91,7 @@ def user_info(user_id):
 
     user= User.query.get(user_id)
 
-    return render_template("userinfo.html", user=user)
+    return render_template("userinfo.html", new_user = user)
 
 
 
@@ -125,9 +119,7 @@ def incident_form():
 
 @app.route('/incident', methods=['POST'])
 def incident():
-    print("Hi") 
-    """Process registration."""
-    # Get form variables
+
     user_id=session["user_id"]
     upset_stomach = request.form.get("upset_stomach")
     stomach_cramp = request.form.get("stomach_cramp")
@@ -135,18 +127,20 @@ def incident():
     vomiting = request.form.get("vomiting")
     diarrhea = request.form.get("diarrhea")
     fever = request.form.get("fever")
-    restaurant1id = request.form.get("restaurant1id")
-    restaurant2id = request.form.get("restaurant2id")
-    restaurant3id = request.form.get("restaurant3id")
-    date1= request.form.get("date1")
-    date2= request.form.get("date2")
-    date3= request.form.get("date3")
+    restaurant_id = request.form.get("restaurant_id")
+    date= request.form.get("date")
+    
 
-    new_input = Incident(user_id=user_id,upset_stomach=upset_stomach,stomach_cramp=stomach_cramp,
-      nausea=nausea,vomiting=vomiting, diarrhea=diarrhea, fever=fever, 
-     restaurant1id = restaurant1id, restaurant2id= restaurant2id, restaurant3id=restaurant3id,
-     date1= date1, date2=date2, date3=date3)
-    print("Hi")     
+    new_input = Incident(user_id=user_id,
+                         upset_stomach=upset_stomach,
+                         stomach_cramp=stomach_cramp,
+                         nausea=nausea,
+                         vomiting=vomiting, 
+                         diarrhea=diarrhea, 
+                         fever=fever, 
+                         restaurant_id = restaurant_id, 
+                         date= date)
+     
 
     db.session.add(new_input)
     db.session.commit()
@@ -171,33 +165,7 @@ def map():
 
     return render_template("map.html",google_map_api=keys['google_map_api']
 )
-# @app.route('/login', methods=['GET'])
-# def login_form():
-#     """Show login form."""
 
-#     return render_template("login_form.html")    
-# ###@app.route("/users")
-# ###def user_list():
-#     """Show list of users."""
-
-# ###    users = User.query.all()
-# ###    return render_template("user_list.html", users=users)
-
-
-# ###@app.route("/users/<int:user_id>")
-# ###def user_detail(user_id):
-#     """Show info about user."""
-
-# ###    user = User.query.options(db.joinedload('ratings').joinedload('movie')).get(user_id)
-# ###    return render_template("user.html", user=user)
-
-
-# @app.route("/restaurants")
-# def movie_list():
-#     """Show list of movies."""
-
-    # restaurants = restaurants.query.order_by('restaurants_name').all()
-    # return render_template("restaurants_list.html", restaurants_name=restaurants_name)
 
 
 if __name__ == "__main__":
